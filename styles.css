@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(204, 43%, 93%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.title {
+    font-size: 1.25rem;
+}
+
+.price-grid-component {
+    width: 90%;
+    max-width: 650px;
+    margin: 50px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.price-grid-component .card {
+    padding: 2em 1.5em;
+    color: white;
+}
+
+.price-grid-component .introduction {
+    background-color: white;
+}
+
+.price-grid-component .introduction .title {
+    color: hsl(179, 62%, 43%);
+}
+
+.price-grid-component .introduction .special-text {
+    color: hsl(71, 73%, 54%);
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.price-grid-component .introduction .description {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+.price-grid-component .subscription {
+    background-color: hsl(179, 62%, 43%);
+}
+
+.price-grid-component .subscription .price {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.price-grid-component .subscription .price .value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.price-grid-component .subscription .price .type {
+    opacity: 0.75;
+}
+
+.price-grid-component .subscription .btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 1em;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    border-radius: 0.5em;
+    font-weight: 700;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.price-grid-component .subscription .btn:hover {
+    opacity: 0.75;
+}
+
+.price-grid-component .features {
+    background-color: hsl(179, 62%, 46%);
+}
+
+.price-grid-component .features .features-list {
+    margin-top: 20px;
+}
+
+.price-grid-component .features .features-list li {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+@media (min-width: 600px) {
+    .price-grid-component {
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 150px;
+    }
+    .price-grid-component .card {
+        padding: 2.5em;
+    }
+    .price-grid-component .introduction {
+        grid-column: span 2;
+    }
+}
